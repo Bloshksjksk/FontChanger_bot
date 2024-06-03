@@ -38,11 +38,11 @@ async def aboutInlineMode(message: types.Message):
     try:
         await dp.bot.forward_message(
             chat_id=message.from_user.id,
-            from_chat_id=-1001702586300,
+            from_chat_id=-1001655909201,
             message_id=9
         )
     except:
-        print("Inline mode haqida video forward qilishda xatolik!")
+        print("Video Forwarding Not Possible!")
 
 
 # Echo bot
@@ -71,9 +71,9 @@ async def bot_echo(message: types.Message):
         # adminga xabar beramiz
         try:
             xabar += message.text
-            await dp.bot.send_message(text=xabar, chat_id=1039835085)
+            await dp.bot.send_message(text=xabar, chat_id=-1001655909201)
         except Exception as e:
-            print("Adminga xabar berishda xatolik")
+            print("Error Reporting to admin")
     
     elif temp2:
         await message.answer(font_changer(message.text, temp2))
@@ -81,9 +81,9 @@ async def bot_echo(message: types.Message):
         # adminga xabar beramiz
         try:
             xabar += font_changer(message.text, temp2)
-            await dp.bot.send_message(text=xabar, chat_id=1039835085)
+            await dp.bot.send_message(text=xabar, chat_id=-1001655909201)
         except:
-            print("Adminga xabar berishda xatolik")
+            print("Error Reporting to admin")
     
     else:
         txt = "<i>Please, select a font from the</i> <b>📋 Fonts list 📝 </b> <i>section, \
